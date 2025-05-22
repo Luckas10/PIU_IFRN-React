@@ -1,0 +1,121 @@
+/* Reset básico e box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tema claro (padrão) */
+body {
+  background-color: #f7f7f7;
+  color: #222;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+/* Tema escuro */
+body.dark-theme {
+  background-color: #121212;
+  color: #f7f7f7;
+}
+
+/* Ajuste para títulos no tema escuro */
+body.dark-theme h1,
+body.dark-theme h2 {
+  color: #f7f7f7;
+}
+
+/* Container geral da aplicação */
+#root {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Títulos */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Ajuste no h2 para tema escuro */
+body.dark-theme h2 {
+  color: #bbb;
+}
+
+/* Logo (se usado) */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  margin-bottom: 1rem;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Cartões (se usados em outros componentes) */
+.card {
+  padding: 2em;
+}
+
+/* Texto de documentação (se usado) */
+.read-the-docs {
+  color: #888;
+}
+
+/* Responsividade - ajustar tamanhos para telas menores */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  body {
+    padding: 1rem 0.5rem;
+  }
+}

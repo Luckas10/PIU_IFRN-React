@@ -1,0 +1,37 @@
+figure {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    width: 160px;
+    text-align: center;
+}
+
+figure:hover {
+    transform: scale(1.05);
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    padding: 12px 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+/* Tema escuro */
+body.dark-theme figure {
+    background-color: #1e1e1e;
+}
+
+body.dark-theme figcaption {
+    color: #f0f0f0;
+}
