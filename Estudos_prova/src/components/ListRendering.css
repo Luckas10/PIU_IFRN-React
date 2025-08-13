@@ -1,0 +1,159 @@
+/* Container geral */
+.posts-container {
+    width: 100%;
+    margin: 24px auto;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+/* Cabeçalho com título + busca */
+.posts-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.posts-header h2 {
+    margin: 0;
+    margin-right: 25px;
+    font-weight: 600;
+}
+
+/* Busca */
+.posts-search input {
+    width: 260px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    outline: none;
+    font-size: 16px;
+    transition: border-color .25s ease, background-color .25s ease;
+}
+
+/* Lista e cards */
+.posts-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+@media (min-width: 640px) {
+    .posts-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 960px) {
+    .posts-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.post-card {
+    border-radius: 12px;
+    padding: 14px;
+    border: 1px solid;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .06);
+}
+
+.post-meta {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.post-title {
+    margin: 4px 0 8px 0;
+    font-size: 1.02rem;
+    line-height: 1.35;
+    font-weight: 600;
+}
+
+.post-body {
+    margin: 0;
+    white-space: pre-line;
+    /* preserva quebras do JSON */
+    line-height: 1.5;
+    font-size: .95rem;
+}
+
+/* -------- Temas -------- */
+
+/* Light */
+body.light-mode .posts-container {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, .06);
+    color: #1a1a1a;
+}
+
+body.light-mode .posts-search input {
+    background: #fff;
+    color: #1a1a1a;
+    border-color: #ddd;
+}
+
+body.light-mode .posts-search input:focus {
+    border-color: #d4b483;
+}
+
+body.light-mode .post-card {
+    background: #fff;
+    border-color: #e6e6e6;
+}
+
+body.light-mode .badge.badge--user {
+    background: #d9c6e0;
+    color: #2f2f2f;
+    /* lilás pastel */
+}
+
+body.light-mode .badge.badge--id {
+    background: #c3d3c0;
+    color: #2f2f2f;
+    /* verde acinzentado pastel */
+}
+
+/* Dark */
+body.dark-mode .posts-container {
+    background: #3a3a3a;
+    border: 1px solid rgba(255, 255, 255, .08);
+    color: #fff;
+}
+
+body.dark-mode .posts-search input {
+    background: #2f2f2f;
+    color: #fff;
+    border-color: #555;
+}
+
+body.dark-mode .posts-search input:focus {
+    border-color: #a89f91;
+}
+
+body.dark-mode .post-card {
+    background: #2f2f2f;
+    border-color: #555;
+}
+
+body.dark-mode .badge.badge--user {
+    background: #a493ae;
+    color: #2f2f2f;
+}
+
+body.dark-mode .badge.badge--id {
+    background: #9fb2a0;
+    color: #2f2f2f;
+}
